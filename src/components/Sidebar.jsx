@@ -11,8 +11,8 @@ const Sidebar = () => (
     className="w-full md:w-1/4 bg-gray-100 h-screen p-6 flex flex-col items-center shadow-md"
   >
     <img
-      src="https://via.placeholder.com/120"
-      alt="Profil"
+      src="/profile.jpg"
+      alt="Profile photo"
       className="w-28 h-28 rounded-full mb-4 border-2 border-blue-500"
     />
     <h2 className="text-2xl font-bold mb-1 text-center">Beyza Nur Bostancıoğlu</h2>

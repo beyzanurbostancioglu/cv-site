@@ -1,12 +1,42 @@
-# React + Vite
+# Beyza Nur Bostancıoğlu - Modern CV Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern and eye-catching personal CV website built with React and Vite. It features neon-effect headings, animated particle background, responsive cards, and a clean design.
 
-Currently, two official plugins are available:
+## Features
+- Modern and impressive dark mode design
+- Neon-effect headings and cards
+- Animated particle background (canvas)
+- Responsive and mobile-friendly
+- Personal info, social media links, projects, experience, and education sections
+- Animated transitions with Framer Motion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- MUI (Material UI)
 
-## Expanding the ESLint configuration
+## Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/<username>/<repo-name>.git
+   ```
+2. Enter the project directory:
+   ```bash
+   cd my-cv
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Customization
+- You can add your own profile photo, name, and social media links in `src/components/Sidebar.jsx` and other components.
+- Update the projects and experience sections with your own information.
+
+

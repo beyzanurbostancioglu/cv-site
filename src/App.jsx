@@ -125,7 +125,7 @@ function App() {
                     opacity: 0.7,
                     transition: '0.4s',
                   }} />
-                  <img src="/src/assets/profile.jpg" alt="Profil" style={{ borderRadius: '50%', boxShadow: '0 8px 32px #00eaff', width: 150, height: 150, objectFit: 'cover', position: 'relative', zIndex: 1, transition: '0.4s' }} />
+                  <img src="/profile.jpg" alt="Profile photo" style={{ borderRadius: '50%', boxShadow: '0 8px 32px #00eaff', width: 150, height: 150, objectFit: 'cover', position: 'relative', zIndex: 1, transition: '0.4s' }} />
                 </Box>
                 <Typography
                   variant="h2"
