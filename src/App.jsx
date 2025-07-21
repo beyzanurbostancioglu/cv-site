@@ -1,7 +1,6 @@
 // ...existing code...
 import About from './components/About';
 
-
 // SkillTag fonksiyonu ve skillList objesi importlardan hemen sonra tanımlanmalı
 const skillList = {
   development: [
@@ -70,6 +69,7 @@ function App() {
     subText: '#b0b0b0',
   };
   const [openModal, setOpenModal] = useState(null);
+  const [showContact, setShowContact] = useState(false); // iletişim butonu için state
   return (
     <ThemeContext.Provider value={theme}>
       <>
@@ -192,12 +192,32 @@ function App() {
                     <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8l8 5 8-5v10z"/></svg>
                   </IconButton>
                 </Stack>
-                <Typography variant="body1" align="center" sx={{ color: theme.subText, fontWeight: 400, fontSize: { xs: 14, md: 18 }, letterSpacing: 0.5 }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                    <svg width="20" height="20" fill="#00eaff" style={{ marginRight: 4 }} viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    Van, Türkiye
-                  </span>
-                </Typography>
+                {/* İletişim Butonu ve Açılır Bilgiler */}
+                <Button
+                  variant="contained"
+                  sx={{ background: theme.neon, color: '#232526', mt: 1, mb: 1, '&:hover': { background: theme.accent } }}
+                  onClick={() => setShowContact(!showContact)}
+                >
+                  İletişim Bilgileri
+                </Button>
+                {showContact && (
+                  <Box sx={{
+                    background: theme.cardBg,
+                    color: theme.text,
+                    border: `1px solid ${theme.neon}`,
+                    borderRadius: 2,
+                    p: 2,
+                    mt: 1,
+                    mb: 1,
+                    boxShadow: theme.cardShadow,
+                    textAlign: 'center',
+                  }}>
+                    <div style={{ marginBottom: 4 }}><b>Mail:</b> beyzanurbostancioglu@gmail.com</div>
+                    {/* Telefon numarası kaldırıldı */}
+                    <div style={{ marginBottom: 4 }}><b>GitHub:</b> <a href="https://github.com/beyzanurbostancioglu" target="_blank" rel="noreferrer" style={{ color: theme.neon, textDecoration: 'underline' }}>beyzanurbostancioglu</a></div>
+                    <div><b>LinkedIn:</b> <a href="https://linkedin.com/in/beyza-nurb" target="_blank" rel="noreferrer" style={{ color: theme.neon, textDecoration: 'underline' }}>beyza-nurb</a></div>
+                  </Box>
+                )}
               </Box>
             </Box>
           </Box>
