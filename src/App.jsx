@@ -45,7 +45,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import { Typography, Divider, Box, Stack, IconButton, Switch, Button, Modal, Tooltip } from '@mui/material';
-import { FaMicrochip, FaRobot, FaLeaf, FaInfoCircle, FaCode, FaTools, FaDatabase, FaLanguage, FaCogs, FaUsers, FaLaptopCode } from 'react-icons/fa';
+import { FaMicrochip, FaRobot, FaLeaf, FaInfoCircle, FaCode, FaTools, FaDatabase, FaLanguage, FaCogs, FaUsers, FaLaptopCode, FaDownload } from 'react-icons/fa';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ParticleBackground from './components/ParticleBackground';
 
@@ -191,6 +191,29 @@ function App() {
                   }} size="large">
                     <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8l8 5 8-5v10z"/></svg>
                   </IconButton>
+                  {/* CV İndir IconButton */}
+                  <Tooltip title="CV'yi indir" placement="top">
+                    <IconButton
+                      href="/cvDownload.pdf"
+                      download
+                      sx={{
+                        color: theme.neon,
+                        background: '#232526',
+                        boxShadow: '0 0 2px ' + theme.neon,
+                        transition: '0.4s',
+                        '&:hover': {
+                          background: 'linear-gradient(90deg, #00eaff 60%, #232526 100%)',
+                          color: '#232526',
+                          boxShadow: '0 0 4px ' + theme.neon,
+                          transform: 'scale(1.08) rotate(4deg)',
+                          filter: 'drop-shadow(0 0 2px ' + theme.neon + ')',
+                        }
+                      }}
+                      size="large"
+                    >
+                      <FaDownload />
+                    </IconButton>
+                  </Tooltip>
                 </Stack>
                 {/* İletişim Butonu ve Açılır Bilgiler */}
                 <Button
